@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View
 from django.shortcuts import render
-from .models import Profile, Work, Experience, Education
+from .models import Profile, Work
 
 # Create your views here.
 
@@ -30,10 +30,6 @@ class AboutView(View):
         profile_data = Profile.objects.all()
         if profile_data.exists():
             profile_data = profile_data.order_by('-id')[0]
-        experience_data = Experience.objects.order_by('-id')[0]
-        education_data = Education.objects.order_by('-id')[0]
         return render(request, 'app/about.html',{
-            'profile_data':profile_data,
-            'experience_data':experience_data,
-            'education_data':education_data,
+            'profile_data':profile_data,  
         })

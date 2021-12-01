@@ -32,21 +32,3 @@ class Work(models.Model):
     def __str__(self):
         return self.title
 
-class Experience(models.Model):
-    occupation = models.CharField('職業', max_length=100)
-    company = models.CharField('会社', max_length=100)
-    description = models.TextField('説明')
-    place = models.CharField('場所', max_length=100)
-    period = models.CharField('期間', max_length=100)
-
-    def __str__(self):
-        return self.occupation
-
-class Education(models.Model):
-    course = models.CharField('コース', max_length=100)
-    school = models.CharField('学校', max_length=100)
-    place = models.CharField('場所', max_length=100)
-    period = models.CharField('期間', max_length=100)
-    
-    def __str__(self):
-        return self.course
