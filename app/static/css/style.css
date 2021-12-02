@@ -109,3 +109,21 @@ main {
 .icon{
   padding: 10px 8px;
 }
+
+.star-rating{
+  position: relative;
+  font-size: 30px;
+  word-wrap: normal!important;
+}
+
+.star-rating-front{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ee6c4d;
+}
+
+.star-rating-back{
+  color: #ccc;
+}
