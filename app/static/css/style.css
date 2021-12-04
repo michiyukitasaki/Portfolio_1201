@@ -127,3 +127,16 @@ main {
 .star-rating-back{
   color: #ccc;
 }
+
+.contact{
+  max-width: 500px;
+}
+
+.form-control:focus{
+  border-color: #ee6c4d;
+  box-shadow: none;
+}
+
+.card{
+  border:none;
+}

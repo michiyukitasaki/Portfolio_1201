@@ -1,0 +1,17 @@
+
+{% extends "app/base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>お問い合わせ</h1>
+      <p>お問い合わせフォームです。</p>
+      <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i>送信する</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
